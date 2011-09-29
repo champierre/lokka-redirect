@@ -1,6 +1,6 @@
 # Lokka "Redirect" Plugin
 
-This plugin is for the website using Lokka deployed on Heroku. The plugin can create any redirect rule. For example, this is useful for migrating from WordPress to Lokka, in case that you want to redirect urls of WP style to those of Lokka style.
+This plugin is for the website using Lokka deployed on Heroku. The plugin can create any redirect rule. For example, this is useful for migrating from WordPress to Lokka, in case that you want to redirect URLs of WP style to those of Lokka style.
 
 ## Installation
 
