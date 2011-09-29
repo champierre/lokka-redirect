@@ -1,5 +1,5 @@
-%h2 Edit Rewrite Rule
-%form{:action => "/admin/plugins/rewrite/rules/#{params[:id]}", :method => 'post'}
+%h2 Edit Redirect Rule
+%form{:action => "/admin/plugins/redirect/rules/#{params[:id]}", :method => 'post'}
   %input{:type => 'hidden', :name => '_method', :value => 'put'}
   .field
     %label{:for => 'rule_pattern'} Pattern

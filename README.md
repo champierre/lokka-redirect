@@ -5,7 +5,7 @@ This plugin is for the website using Lokka deployed on Heroku. The plugin can cr
 ## Installation
 
     $ cd LOKKA_ROOT/public/plugin
-    $ git clone git@github.com:champierre/lokka-rewrite.git
+    $ git clone git@github.com:champierre/lokka-redirect.git
 
 ## Usage
 
@@ -30,7 +30,7 @@ create the following rule from "rewrite" plugin admin page.
   </tr>
 </table>
 
-## Examples of Rewrite Rules
+## Examples of Redirect Rules
 
 <table>
   <tr>

@@ -1,4 +1,4 @@
-%h2 Rewrite
+%h2 Redirect
 %h3 Examples
 %table{:style => 'margin-bottom:30px'}
   %tr
@@ -24,8 +24,8 @@
       %td= rule['pattern']
       %td= rule['substitution']
       %td
-        %a.button{:href => "/admin/plugins/rewrite/rules/#{i}/edit"}= t.edit
+        %a.button{:href => "/admin/plugins/redirect/rules/#{i}/edit"}= t.edit
       %td
-        = link_to t.delete, "/admin/plugins/rewrite/rules/#{i}", :class => 'button', :confirm => t.are_you_sure, :method => :delete
+        = link_to t.delete, "/admin/plugins/redirect/rules/#{i}", :class => 'button', :confirm => t.are_you_sure, :method => :delete
 %div
-  %a.button{:href => "/admin/plugins/rewrite/rules/new"}= t.new
+  %a.button{:href => "/admin/plugins/redirect/rules/new"}= t.new
