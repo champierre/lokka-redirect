@@ -1,0 +1,31 @@
+%h2 Rewrite
+%h3 Examples
+%table{:style => 'margin-bottom:30px'}
+  %tr
+    %th Pattern
+    %th Substitution
+  %tr{:class => 'odd'}
+    %td ^/archives/(\d+)/*$
+    %td /\1
+  %tr{:class => 'even'}
+    %td ^/archives/date/(\d{4})/(\d{2})/*$
+    %td /\1/\2/
+  %tr{:class => 'odd'}
+    %td ^/archives/date/(\d{4})/*$
+    %td /\1/
+%h3 Rules
+%table{:style => 'margin-bottom:30px'}
+  %tr
+    %th Pattern
+    %th Substitution
+    %th{:colspan => 2}
+  - @rules.each_with_index do |rule, i|
+    %tr{:class => (i+1).odd? ? 'odd' : 'even'}
+      %td= rule['pattern']
+      %td= rule['substitution']
+      %td
+        %a.button{:href => "/admin/plugins/rewrite/rules/#{i}/edit"}= t.edit
+      %td
+        = link_to t.delete, "/admin/plugins/rewrite/rules/#{i}", :class => 'button', :confirm => t.are_you_sure, :method => :delete
+%div
+  %a.button{:href => "/admin/plugins/rewrite/rules/new"}= t.new

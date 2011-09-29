@@ -1,0 +1,13 @@
+%h2 Edit Rewrite Rule
+%form{:action => "/admin/plugins/rewrite/rules/#{params[:id]}", :method => 'post'}
+  %input{:type => 'hidden', :name => '_method', :value => 'put'}
+  .field
+    %label{:for => 'rule_pattern'} Pattern
+    %br
+    %input{:type => 'text', :id => 'rule_pattern', :name => 'rule[pattern]', :value => @rule['pattern']}
+  .field
+    %label{:for => 'rule_substitution'} Substitution
+    %br
+    %input{:type => 'text', :id => 'rule_substitution', :name => 'rule[substitution]', :value => @rule['substitution']}
+  %p
+    %input{:type => 'submit', :value => t.edit}

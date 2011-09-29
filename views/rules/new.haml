@@ -1,0 +1,12 @@
+%h2 New Rewrite Rule
+%form{:action => '/admin/plugins/rewrite/rules', :method => 'post'}
+  .field
+    %label{:for => 'rule_pattern'} Pattern
+    %br
+    %input{:type => 'text', :id => 'rule_pattern', :name => 'rule[pattern]'}
+  .field
+    %label{:for => 'rule_substitution'} Substitution
+    %br
+    %input{:type => 'text', :id => 'rule_substitution', :name => 'rule[substitution]'}
+  %p
+    %input{:type => 'submit', :value => t.new}
