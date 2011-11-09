@@ -1,12 +1,11 @@
 %h2 New Redirect Rule
-%form{:action => '/admin/plugins/redirect/rules', :method => 'post'}
+- form_for @rule, '/admin/plugins/redirect/rules', :method => 'post' do |f|
   .field
-    %label{:for => 'rule_pattern'} Pattern
-    %br
-    %input{:type => 'text', :id => 'rule_pattern', :name => 'rule[pattern]'}
+    = f.label :pattern
+    %br/
+    = f.text_field :pattern
   .field
-    %label{:for => 'rule_substitution'} Substitution
-    %br
-    %input{:type => 'text', :id => 'rule_substitution', :name => 'rule[substitution]'}
-  %p
-    %input{:type => 'submit', :value => t.new}
+    = f.label :substitution
+    %br/
+    = f.text_field :substitution
+  %p= f.submit t('new')

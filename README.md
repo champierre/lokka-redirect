@@ -6,6 +6,7 @@ This plugin is for the website using Lokka deployed on Heroku. The plugin can cr
 
     $ cd LOKKA_ROOT/public/plugin
     $ git clone git@github.com:champierre/lokka-redirect.git
+    $ rm -rf lokka-redirect/.git
 
 ## Usage
 
